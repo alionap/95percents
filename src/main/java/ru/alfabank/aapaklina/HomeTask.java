@@ -13,18 +13,19 @@ public class HomeTask {
 
     public static void main(String[] args) {
         Store store1 = new Store();
-        
+
+        store1.vegetables.add(new Vegetable("огурец", "зеленый", 12));
+        store1.linens.add(new Linen("белье", "белое", 200));
     }
 
     static class Store {
 
-        public static void main(String[] args) {
-            List<Product.Vegetabl> store1 = new ArrayList<Product.Vegetabl>();
-            store1.add(new Product.Vegetabl("огурец", "зеленый", 15));
+        Integer field1;
+        List<Vegetable> vegetables = new ArrayList<>();
+        List<Linen> linens = new ArrayList<>();
 
-            List<Product.Linen> store2 = new ArrayList<Product.Linen>();
-            store2.add(new Product.Linen("постельное белье", "красный", 200));
-        }
+
+
     }
 
     static class Product {
@@ -37,12 +38,12 @@ public class HomeTask {
             this.color = color;
             this.size = size;
         }
+    }
 
-
-        static class Vegetabl extends Product {
+        static class Vegetable extends Product {
             String brand;
 
-            Vegetabl(String name, String color, Integer size) {
+            Vegetable(String name, String color, Integer size) {
                 super(name, color, size);
             }
         }
@@ -56,6 +57,5 @@ public class HomeTask {
         }
     }
 
-}
 
 
